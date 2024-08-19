@@ -3,23 +3,23 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        Employee ivan = new Employee("Ivan", "Igorevich",
-                "Ovchinnikov", "8(495)000-11-22",
-                "developer", 50000, 1985, Employee.Gender.MALE);
-        Employee andrey = new Employee("Andrey", "Viktorovich",
-                "Bezrukov", "8(495)111-22-33",
-                "fitter", 52000, 1973, Employee.Gender.MALE);
-        Employee evgeniy = new Employee("Evgeniy", "Viktorovich",
-                "Delfinov", "8(495)222-33-44",
-                "project manager", 40000, 1963, Employee.Gender.MALE);
-        Employee natalia = new Employee("Natalia", "Pavlovna",
-                "Keks", "8(495)333-44-55",
-                "senior developer", 90000, 1990, Employee.Gender.FEMALE);
-        Employee tatiana = new Employee("Tatiana", "Sergeevna",
-                "Krasotkina", "8(495)444-55-66",
-                "accountant", 50000, 1983, Employee.Gender.FEMALE);
-        Employee alexei = new Manager("Alexei", "Vladimirovich",
-                "Bobylev", "8(495)777-66-00", "manager", 250000, 1987, 5,
+        Employee ivan = new Employee("Иван", "Игоревич",
+                "Овчинников", "8(700)000-11-22",
+                "Разработчик", 50000, 1985, Employee.Gender.MALE);
+        Employee andrey = new Employee("Андрей", "Викторович",
+                "Безруков", "8(705)111-22-33",
+                "Техник-монтажник", 52000, 1973, Employee.Gender.MALE);
+        Employee evgeniy = new Employee("Евгений", "Викторович",
+                "Зилотов", "8(777)222-33-44",
+                "Проект менеджер", 40000, 1963, Employee.Gender.MALE);
+        Employee natalia = new Employee("Наталья", "Павловна",
+                "Зикер", "8(701)333-44-55",
+                "Главный разработчик", 90000, 1990, Employee.Gender.FEMALE);
+        Employee tatiana = new Employee("Татьяна", "Сергеевна",
+                "Касаткина", "8(702)444-55-66",
+                "Бухгалтер", 50000, 1983, Employee.Gender.FEMALE);
+        Employee alexei = new Manager("Алексей", "Владимирович",
+                "Бабиков", "8(777)777-66-00", "Менеджер", 250000, 1987, 5,
                 30, Employee.Gender.MALE);
         Employee[] employees = new Employee[6];
         employees[0] = ivan;
@@ -38,12 +38,12 @@ public class Main {
                 tatiana.getSalary(), alexei.getSalary()};
 //        System.out.println("Зарплаты после повышения" + Arrays.toString(salAfterIncrease));
 
-        Employee emp1 = new Employee("Roman", "Vladimirovich",
-                "Kuzmich", "8(495)222-33-44",
-                "developer", 80000, 1986, 3, 25, Employee.Gender.MALE);
-        Employee emp2 = new Employee("Nikolay", "Evgenievich",
-                "Artemov", "8(495)555-22-55",
-                "manager", 200000, 1985, 12, 18, Employee.Gender.MALE);
+        Employee emp1 = new Employee("Роман", "Владимирович",
+                "Кузьмин", "8(708)222-33-44",
+                "Разработчик", 80000, 1986, 3, 25, Employee.Gender.MALE);
+        Employee emp2 = new Employee("Николай", "Евгеньевич",
+                "Артемов", "8(705)555-22-55",
+                "Менеджер", 200000, 1985, 12, 18, Employee.Gender.MALE);
 //        System.out.println(emp1.compareAge(emp2));
 //        System.out.println(emp2.compareAge(emp1));
 
@@ -66,11 +66,11 @@ public class Main {
                     break;
                 case DEFENDER_DAY:
                     if (employees[i].getGender().equals(Employee.Gender.MALE)) {
-                        System.out.println("Поздравляем с Днем защитника Откчества, " + employees[i].getName());
+                        System.out.println("Поздравляем с Днем защитника Отечества, " + employees[i].getName());
                     }
                     break;
                 default:
-                    System.out.println("Какой чудесный день, " + employees[i].getName());
+                    System.out.println("Хорошего дня, " + employees[i].getName());
             }
         }
     }
@@ -79,7 +79,7 @@ public class Main {
         Date dateNow = new Date();
         if(dateNow.getDate() == 1 && dateNow.getMonth() == 1){
             today = Holidays.NEW_YEAR;
-        } else if (dateNow.getDate() == 23 && dateNow.getMonth() == 2) {
+        } else if (dateNow.getDate() == 7 && dateNow.getMonth() == 5) {
             today = Holidays.DEFENDER_DAY;
         } else if (dateNow.getDate() == 8 && dateNow.getMonth() == 3) {
             today = Holidays.WOMEN_DAY;
