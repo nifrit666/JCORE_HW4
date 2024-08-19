@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -77,11 +78,11 @@ public class Main {
 
     private static Holidays declareHoliday(){
         Date dateNow = new Date();
-        if(dateNow.getDate() == 1 && dateNow.getMonth() == 1){
+        if(dateNow.getDate() == 1 && dateNow.getMonth() == Calendar.JANUARY){
             today = Holidays.NEW_YEAR;
-        } else if (dateNow.getDate() == 7 && dateNow.getMonth() == 5) {
+        } else if (dateNow.getDate() == 23 && dateNow.getMonth() == Calendar.FEBRUARY) {
             today = Holidays.DEFENDER_DAY;
-        } else if (dateNow.getDate() == 8 && dateNow.getMonth() == 3) {
+        } else if (dateNow.getDate() == 8 && dateNow.getMonth() == Calendar.MARCH) {
             today = Holidays.WOMEN_DAY;
         } else {
             today = Holidays.NONE;
